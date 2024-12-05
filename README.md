@@ -33,6 +33,9 @@ This project implements a microservices architecture to support the physical cha
 - **Service Discovery:**  
   Automatic service registration and load balancing.
 
+- **Caching with Redis:**  
+  Redis is used for caching frequently accessed data to enhance performance.
+
 ---
 
 ## Technical Specification
@@ -72,7 +75,8 @@ This project implements a microservices architecture to support the physical cha
 - **Security:** JWT-based authentication and TLS encryption.
 - **Scalability:** Horizontal scaling of services.
 - **Reliability:** 99.9% system uptime.
-- **Test Coverage:** Minimum of 80% across all modules.
+- **Test Coverage:** Minimum of 80%.
+- **Database Migration:** Liquibase is used for database schema versioning and management.
 
 ---
 
@@ -96,23 +100,14 @@ The project follows a **Git Flow** that includes the following branches:
 
 ---
 
-## Example Use Case: ATM Withdrawal
-
-1. The ATM Service requests PIN validation from the Customer Service.  
-2. The Customer Service validates the PIN and sends a response.  
-3. The ATM Service processes the withdrawal via the Transactions Service.  
-4. The Transactions Service updates the account balance using the Account Service.  
-5. The Notification Service informs the customer about the transaction.  
-6. The Auditing Service logs the transaction details.
-
----
-
 ## Tech Stack
 
 - **Programming Language:** Java  
 - **Frameworks:** Spring Boot, Spring Cloud  
-- **Database:** PostgreSQL, MongoDB  
+- **Database:** PostgreSQL  
+- **Caching:** Redis  
 - **Message Broker:** RabbitMQ  
+- **Database Migration:** Liquibase  
 - **Monitoring Tools:** Prometheus, Grafana  
 - **Logging:** ELK Stack (ElasticSearch, Logstash, Kibana)
 
