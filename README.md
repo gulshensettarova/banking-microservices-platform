@@ -113,9 +113,4 @@ The project follows a **Git Flow** that includes the following branches:
 
 ---
 
-## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/banking-microservices-platform.git
-   cd banking-microservices-platform
